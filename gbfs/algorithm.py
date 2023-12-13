@@ -11,7 +11,7 @@ def gbfs_move(position, player, game):
         for moves in possible_moves:
             score = 0
             score += (game.get_board().red_left - moves.red_left)*5
-            score += (game.get_board().white_kings - moves.white_kings)*2
+            score += (moves.white_kings - game.get_board().white_kings)*2
             score += 1
             scores.append(score)
 
