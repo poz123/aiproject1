@@ -5,6 +5,7 @@ from checkers.constants import *
 from checkers.game import Game
 from minimax.algorithm import minimax
 from randmove.algorithm import random_move
+from gbfs.algorithm import gbfs_move
 
 FPS = 60
 
@@ -42,7 +43,7 @@ def play_game():
                 new_board = random_move(game.get_board(), WHITE, game)
             elif ai_algorithm is GREEDY_BFS:
                 # method call for greedy bfs move goes here (rn the game will just crash if you select this in options)
-                pass
+                new_board = gbfs_move(game.get_board(), WHITE, game)
             elif ai_algorithm is MINIMAX:
                 value, new_board = minimax(game.get_board(), 4, WHITE, game)
             game.ai_move(new_board)
