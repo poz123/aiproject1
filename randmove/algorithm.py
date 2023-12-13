@@ -3,7 +3,7 @@ from copy import deepcopy
 
 
 def random_move(position, player, game):
-    if position.winner() is not None:
+    if position.winner() is not None or get_all_moves(position, player, game) is None:
         return position
     else:
         possible_moves = get_all_moves(position, player, game)

@@ -71,7 +71,7 @@ def play_game():
                 winner_text = 'The AI won! Click to return to the main menu'
             elif game.winner() is RED:
                 winner_text = 'You won! Click to return to the main menu'
-            text = font.render(winner_text, True, WHITE)
+            text = font.render(winner_text, True, WHITE, BLACK)
             text_rect = text.get_rect()
             text_rect.center = (WIDTH // 2, HEIGHT // 2)
             WIN.blit(text, text_rect)
