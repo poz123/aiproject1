@@ -1,2 +1,2 @@
 # Python-Checkers-AI
-A checkers AI using the minimax algorithm.
+Play a game of checkers against an AI opponent and learn about different searching algorithms.
